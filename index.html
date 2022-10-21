@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>传奇电脑外设店</title>
+    <link rel="stylesheet" href="./node_modules/animate.css/animate.min.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./assets/js/common.js"></script>
+    <script src=""></script>
+</head>
+<body>
+    <div id="header"></div>
+
+    <div id="container"></div>
+
+    <div id="footer"></div>
+    
+    <script>
+        $('#header').load('./compoents/header/header.html')
+        $('#footer').load('./compoents/footer/footer.html')
+
+        const page=R.search('page') || 'home'
+        $('#container').load(`./pages/${page}/${page}.html`)
+    </script>
+</body>
+</html>
